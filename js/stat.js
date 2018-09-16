@@ -20,7 +20,7 @@ var renderCloud = function (ctx, x, y) {
   ctx.fillStyle = CLOUD_SHADOW_COLOUR;
   ctx.fillRect(x + CLOUD_SHADOW_GAP, y + CLOUD_SHADOW_GAP, CLOUD_WIDTH, CLOUD_HEIGHT);
   ctx.fillStyle = CLOUD_COLOUR;
-  ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);  
+  ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
   ctx.fill();
   ctx.fillStyle = 'black';
   ctx.shadowColor = 'rgba(0, 0, 0, 0)';
@@ -71,4 +71,4 @@ window.renderStatistics = function (ctx, names, times) {
     renderBar(ctx, times, i);
     renderBarText(ctx, names, times, i, 'black');
   }
-};   
+};
