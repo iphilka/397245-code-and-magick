@@ -15,7 +15,7 @@ var BAR_GAP = 50;
 var BAR_BOTTOM_MARGIN = 40;
 var BAR_TOP_MARGIN = 5;
 var BAR_TEXT_BOTTOM_MARGIN = 25;
-var BAR_TEXT_COLOR = 'black'
+var BAR_TEXT_COLOR = 'black';
 var BAR_TEXT_WINNER_COLOR = 'rgba(255, 0, 0, 1)';
 
 var renderCloud = function (ctx, x, y) {
