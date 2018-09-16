@@ -58,8 +58,8 @@ var renderBarText = function (ctx, players, results, counter, textColor) {
   ctx.fillStyle = textColor;
   var maxTime = getMaxElement(results);
   var barHeight = BAR_MAX_HEIGHT * (results[counter] / maxTime);
-  ctx.fillText(String(players[counter]), CLOUD_X + BAR_GAP * (counter + 1) + BAR_WIDTH * (counter + 0.5), CLOUD_Y + CLOUD_HEIGHT - BAR_TEXT_BOTTOM_MARGIN);
-  ctx.fillText(String(Math.round(results[counter])), CLOUD_X + BAR_GAP * (counter + 1) + BAR_WIDTH * (counter + 0.5), CLOUD_Y + CLOUD_HEIGHT - BAR_BOTTOM_MARGIN - barHeight - BAR_TOP_MARGIN);
+  ctx.fillText(players[counter].toString(), CLOUD_X + BAR_GAP * (counter + 1) + BAR_WIDTH * (counter + 0.5), CLOUD_Y + CLOUD_HEIGHT - BAR_TEXT_BOTTOM_MARGIN);
+  ctx.fillText(Math.round(results[counter].toString()), CLOUD_X + BAR_GAP * (counter + 1) + BAR_WIDTH * (counter + 0.5), CLOUD_Y + CLOUD_HEIGHT - BAR_BOTTOM_MARGIN - barHeight - BAR_TOP_MARGIN);
 };
 
 window.renderStatistics = function (ctx, names, times) {
