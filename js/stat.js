@@ -4,9 +4,6 @@ var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
 var CLOUD_Y = 10;
-var CURVES_X = 3;
-var CURVES_Y = 2;
-var CURVES_HEIGHT = 40;
 var CLOUD_COLOUR = 'white';
 var CLOUD_SHADOW_COLOUR = 'rgba(0, 0, 0, 0.7)';
 var CLOUD_SHADOW_GAP = 10;
@@ -20,11 +17,10 @@ var BAR_TOP_MARGIN = 5;
 var BAR_TEXT_BOTTOM_MARGIN = 25;
 
 var renderCloud = function (ctx, x, y) {
+  ctx.fillStyle = CLOUD_SHADOW_COLOUR;
+  ctx.fillRect(x + CLOUD_SHADOW_GAP, y + CLOUD_SHADOW_GAP, CLOUD_WIDTH, CLOUD_HEIGHT);
   ctx.fillStyle = CLOUD_COLOUR;
-  ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
-  //ctx.shadowColor = CLOUD_SHADOW_COLOUR;
-  //ctx.shadowOffsetX = CLOUD_SHADOW_GAP;
-  //ctx.shadowOffsetY = CLOUD_SHADOW_GAP;
+  ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);  
   ctx.fill();
   ctx.fillStyle = 'black';
   ctx.shadowColor = 'rgba(0, 0, 0, 0)';
@@ -75,10 +71,4 @@ window.renderStatistics = function (ctx, names, times) {
     renderBar(ctx, times, i);
     renderBarText(ctx, names, times, i, 'black');
   }
-};
-
-
-
-
-ctx.fillStyle = color;
-   
+};   
