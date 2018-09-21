@@ -9,12 +9,7 @@ var WIZARDS_NUMBER = 4;
 var showHiddenClass = function (className) {
   var element = document.querySelector(className);
   return element.classList.remove('hidden');
-}
-
-var showHiddenClass = function (className) {
-  var element = document.querySelector(className);
-  return element.classList.remove('hidden');
-}
+};
 
 var getRandomInRange = function (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -43,7 +38,7 @@ var generateWizardsData = function () {
   return wizardsData;
 };
 
-var  addElementToFragment = function () {
+var addElementToFragment = function () {
   for (var i = 0; i < WIZARDS_NUMBER; i++) {
     fragment.appendChild(renderWizard(wizardsData[i]));
   }
